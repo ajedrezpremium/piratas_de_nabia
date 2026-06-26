@@ -1,8 +1,15 @@
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-navy-900">
-      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(10,22,40,0.7),rgba(10,22,40,0.9)),radial-gradient(ellipse_at_top,rgba(15,31,58,0.5)_0%,transparent_70%)]" />
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMSIvPjwvZz48L2c+PC9zdmc+')] opacity-40" />
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?q=80&w=2070&auto=format&fit=crop')",
+        }}
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(10,22,40,0.4),rgba(10,22,40,0.85)),radial-gradient(ellipse_at_center,rgba(15,31,58,0.3)_0%,transparent_70%)]" />
+      <div className="absolute top-0 right-0 h-full w-1/2 bg-[radial-gradient(ellipse_at_top_right,rgba(240,180,41,0.15)_0%,transparent_60%)]" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-4 text-center">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-white/70">
