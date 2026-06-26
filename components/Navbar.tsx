@@ -3,12 +3,12 @@ import { useState } from "react";
 import Link from "next/link";
 
 const navLinks = [
-  { label: "Islas Cíes", href: "#" },
-  { label: "Isla de Ons", href: "#" },
-  { label: "San Simón", href: "#" },
-  { label: "Ruta del Mejillón", href: "#" },
-  { label: "Moaña-Vigo", href: "#" },
-  { label: "Grupos", href: "#" },
+  { label: "Islas Cíes", href: "https://www.piratasdenabia.com/islas-cies" },
+  { label: "Isla de Ons", href: "https://www.piratasdenabia.com/isla-de-ons" },
+  { label: "San Simón", href: "https://www.piratasdenabia.com/isla-de-san-simon" },
+  { label: "Ruta del Mejillón", href: "https://www.piratasdenabia.com/ruta-del-mejillon" },
+  { label: "Moaña-Vigo", href: "https://www.piratasdenabia.com/linea-regular-moana-vigo" },
+  { label: "Grupos", href: "https://www.piratasdenabia.com/grupos" },
 ];
 
 export default function Navbar() {
