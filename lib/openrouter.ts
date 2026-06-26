@@ -1,9 +1,9 @@
 const OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
 
 const MODELS = [
+  "openrouter/free",
   "meta-llama/llama-3.3-70b-instruct:free",
-  "google/gemma-4-9b-it:free",
-  "qwen/qwen3-coder:free",
+  "nousresearch/hermes-3-llama-3.1-405b:free",
   "meta-llama/llama-3.2-3b-instruct:free",
 ];
 
@@ -37,6 +37,8 @@ async function tryModel(
   return data.choices[0]?.message?.content || null;
 }
 
+const delay = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 export async function chatCompletion(
   messages: { role: string; content: string }[],
   systemPrompt: string
@@ -50,6 +52,9 @@ export async function chatCompletion(
     } catch (e: any) {
       lastError = e.message;
       console.warn(`Model ${model} failed:`, e.message);
+      if (e.message.includes("429")) {
+        await delay(1500);
+      }
     }
   }
 
